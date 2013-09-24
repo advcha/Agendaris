@@ -1,0 +1,135 @@
+/* CSS Menus - Vertical CSS Menu with Popout and Dropdown Menus - 20050131 */
+
+*{margin:0;padding:0;border:none;}
+
+body{margin:0.5em 0.5em 0.5em 2.0em;font-size:100%;font-family:verdana,tahoma,arial,sans-serif;}
+
+/* Begin CSS Popout Menu */
+
+#menu{
+position:absolute;
+top:0.5em;
+left:0.5em;
+z-index:2;
+width:11.5em;
+padding-bottom:12em; /* To allow room for bottom dropdown */
+}
+
+#menu a{
+font:normal 90%/205% tahoma,arial,helvetica,sans-serif;
+display:block;
+border-width:1px;
+border-style:solid;
+border-color:#ccc #888 #555 #bbb;
+white-space:nowrap;
+margin:0;
+padding:0 4px;
+}
+
+#menu h3{
+font:bold 90%/205% tahoma,arial,helvetica,sans-serif;
+display:block;
+border-width:1px;
+border-style:solid;
+border-color:#ccc #888 #555 #bbb;
+white-space:nowrap;
+margin:0;
+padding:0 4px;
+}
+
+
+#menu h3{
+color:#fff;
+background:#007700;
+text-transform:uppercase;
+}
+
+#menu a{
+color:#000;
+background:#eee;
+text-decoration:none;
+}
+
+#menu a:hover{
+color:#a00;
+background:#ddd;
+}
+
+#menu a:active{
+color:#060;
+background:#ccc;
+}
+
+#menu ul{
+list-style:none;
+margin:0;
+padding:0;
+width:100%;
+}
+
+/* Requirement: Put the element selector name (div)
+onto non anchor hover selectors to force IE5 and
+5.5 to correctly apply the csshover file. */
+
+div#menu li, div#menu li:hover{
+position:relative;
+}
+
+div#menu li ul{
+position:absolute;
+top:0;
+left:100.1%;
+display:none;
+}
+
+div#menu ul ul,
+div#menu ul ul ul,
+div#menu ul li:hover ul ul,
+div#menu ul li:hover ul ul ul
+{display:none;}
+
+div#menu ul li:hover ul,
+div#menu ul ul li:hover ul,
+div#menu ul ul ul li:hover ul
+{display:block;}
+
+/* End non-anchor hover selectors */
+
+/* Styling for Expand */
+
+#menu a.x, #menu a.x:visited{
+background:#eee url(images/expand3.gif) no-repeat bottom right;
+}
+
+#menu a.x:hover{
+color:#a00;
+background:#ddd;
+}
+
+#menu a.x:active{
+color:#060;
+background:#ccc;
+}
+
+/* Begin Content Area */
+
+#content{margin:0 0 0 10em;padding:0.5em;border:1px solid #000;}
+#content a:link{color:#a00;}
+#content a:visited{color:#a00;}
+#content a:hover{color:#a00;background:#eee;}
+#content a:active{color:#060;background:#ddd;}
+#content h1, #content h2, #content h3{font:bold 1.0em arial,sans-serif;margin:0.5em 0.25em;padding:0;}
+#content img{border:none;}
+#content p{font:normal 0.9em/1.5em verdana,sans-serif;margin:1.0em;}
+#content ul, #content ul ul{font:normal 0.9em/1.4em verdana,tahoma,arial,sans-serif;margin:1.0em 4.0em 1.5em 4.0em;}
+#content ul li{font:normal 0.9em/1.4em verdana,tahoma,arial,sans-serif;margin:1.0em 0;}
+#content ul ul li{font:normal 1.1em/1.6em verdana,tahoma,arial,sans-serif;margin:0;}
+#content .fr{float:right;margin:0 0 1.0em 1.0em;}
+#content .mod{font:normal .7em arial,sans-serif;margin:.25em;}
+div.vv{position:relative;top:0;float:right;margin:0 0 15px 15px;}
+span.as300250{float:right;margin:0 1.0em .2em 1.0em;}
+span.as300250l{float:left;margin:0 1.0em .2em 1.0em;}
+span.as120240{float:right;margin:0 1.0em .2em 1.0em;}
+span.as120240l{float:left;margin:0 1.0em .2em 1.0em;}
+
+/* End Content Area */
